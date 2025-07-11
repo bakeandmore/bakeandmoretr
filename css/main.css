@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 *,
 *::after,
 *::before {
@@ -231,6 +232,7 @@ hr {
   padding-right: 32px;
 }
 h4 {
+  font-family: "Dancing Script", cursive;
   font-size: 16px; /* Standart boyut (istediğiniz değeri px, rem veya em olarak ayarlayın) */
   line-height: 1.4; /* Okunabilirlik için satır yüksekliği */
   font-weight: normal; /* Kalınlık (bold yerine normal yapar) */
