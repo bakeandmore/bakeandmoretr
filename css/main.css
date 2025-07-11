@@ -233,7 +233,7 @@ hr {
 }
 h4 {
   font-family: "Dancing Script", cursive;
-  font-size: 16px; /* Standart boyut (istediğiniz değeri px, rem veya em olarak ayarlayın) */
+  font-size: 35px; /* Standart boyut (istediğiniz değeri px, rem veya em olarak ayarlayın) */
   line-height: 1.4; /* Okunabilirlik için satır yüksekliği */
   font-weight: normal; /* Kalınlık (bold yerine normal yapar) */
   margin: 0 0 10px 0; /* Dış boşluk (üst-sağ-alt-sol) */
