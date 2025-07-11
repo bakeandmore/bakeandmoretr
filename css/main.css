@@ -89,8 +89,8 @@ a {
 hr {
   height: 3px;
   border-width: 0px;
-  color: #f0f7ee;
-  background-color: #f0f7ee;
+  color: #877260;
+  background-color: #877260;
   margin: 35px;
 }
 #goTop {
@@ -177,7 +177,7 @@ hr {
   width: 45%;
   min-width: 150px;
   height: 90px;
-  border: #f0f7ee 2px solid;
+  border: #877260 2px solid;
   border-radius: 5px;
   margin: 5px;
 }
