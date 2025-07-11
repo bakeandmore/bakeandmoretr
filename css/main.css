@@ -123,7 +123,9 @@ hr {
 .logo,
 .navLogo,
 .mainLogo,
-
+.descLogo {
+  filter: hue-rotate(63deg);
+}
 .mainLogo {
   max-width: 70vw;
 }
