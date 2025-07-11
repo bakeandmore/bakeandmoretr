@@ -123,10 +123,7 @@ hr {
 .logo,
 .navLogo,
 .mainLogo,
-.descLogo {
-  filter: invert(95%) sepia(7%) saturate(222%) hue-rotate(63deg)
-    brightness(104%) contrast(94%);
-}
+
 .mainLogo {
   max-width: 70vw;
 }
