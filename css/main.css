@@ -238,3 +238,16 @@ h4 {
   font-weight: normal; /* Kalınlık (bold yerine normal yapar) */
   margin: 0 0 10px 0; /* Dış boşluk (üst-sağ-alt-sol) */
 }
+#ac1 {
+  display: flex;                  /* Flexbox aktif */
+  justify-content: center;        /* Yatay ortala */
+  align-items: center;            /* Dikey ortala */
+  text-align: center;             /* Metin ortala */
+  min-height: 100px;             /* Minimum yükseklik (isteğe bağlı) */
+}
+
+#ac1 .desc {
+  width: 100%;                   /* Container genişliğine uyum sağla */
+  padding: 10px;
+  text-align: center !important;                 /* Okunabilirlik için boşluk (isteğe bağlı) */
+}
