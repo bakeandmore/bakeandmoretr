@@ -7,9 +7,64 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bake & More Qr Menu</title>
+      <style>
+      /* Dil Seçim Popup Stili */
+      .language-popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        font-family: Arial, sans-serif;
+      }
+      .language-box {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      }
+      .language-box h2 {
+        margin-bottom: 20px;
+        color: #333;
+      }
+      .language-btn {
+        padding: 12px 25px;
+        margin: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+      .language-btn.tr {
+        background: #E30A17; /* Türk bayrağı kırmızısı */
+        color: white;
+      }
+      .language-btn.eng {
+        background: #0A17E3; /* İngiliz bayrağı mavisi */
+        color: white;
+      }
+      .language-btn:hover {
+        opacity: 0.8;
+      }
+      </style>
   </head>
 
   <body style="max-width: 768px; margin: auto">
+    <div class="language-popup" id="languagePopup">
+      <div class="language-box">
+        <h2>Lütfen Dilinizi Seçin / Please Choose Your Language</h2>
+        <button class="language-btn tr" onclick="redirectTo('tr')">TÜRKÇE</button>
+        <button class="language-btn eng" onclick="redirectTo('eng')">ENGLISH</button>
+      </div>
+    </div>
     <a href="#navigation" id="goTop" title="Go to top"
       ><img
         src="images/icons/arrow-up-solid.svg"
@@ -668,12 +723,82 @@
         </div>
         <div class="price">195₺</div>
       </div>
-    </div>
+      <div class="urun" id="veganchailatte">
+        <div class="content">
+          <div class="name">Vegan Chai Tea Latte</div>
+          <div class="desc">
+              Hindistan Cevizi, Badem Ya Da Yulaf Sütü
+          </div>
+        </div>
+        <div class="price">225₺</div>
+      </div>
+      <div class="urun" id="icedchailatte">
+        <div class="content">
+          <div class="name">İced Chai Tea Latte</div>
+        </div>
+        <div class="price">195₺</div>
+      </div>
+      <div class="urun" id="icedveganchailatte">
+        <div class="content">
+          <div class="name">Vegan İced Chai Tea Latte</div>
+          <div class="desc">
+              Hindistan Cevizi, Badem Ya Da Yulaf Sütü
+          </div>
+        </div>
+        <div class="price">225₺</div>
+      </div>
+      <div class="urun" id="looseleafteas">
+        <div class="content">
+          <div class="name">Yaprak Bitki Çayları</div>
+        </div>
+        <div class="price">150₺</div>
+      </div>
+      <div class="urun" id="englishtea">
+        <div class="content">
+          <div class="name">English PG Tips</div>
+        </div>
+        <div class="price">150₺</div>
+      </div>
+      <div class="urun" id="englishteapot">
+        <div class="content">
+          <div class="name">English PG Tips Tea Pot</div>
+        </div>
+        <div class="price">275₺</div>
+      </div>
+      <div class="urun" id="turkishtea">
+        <div class="content">
+          <div class="name">Türk Çayı (Küçük / Büyük)</div>
+        </div>
+        <div class="price">50/90₺</div>
+      </div>
     </div>
     <script type="text/javascript" src="js/main.js"></script>
     <script
       type="text/javascript"
       src="js/lightbox-plus-jquery.min.js"
     ></script>
+    <script>
+    // Dil seçimine göre yönlendirme
+    function redirectTo(lang) {
+      const landing = document.getElementById('landing');
+      const popup = document.getElementById('languagePopup');
+
+      if (lang === 'tr') {
+        // Türkçe sayfada kal (mevcut içerik gözükecek)
+        popup.style.display = 'none';
+        landing.style.display = 'block';
+        // Sayfa içeriğini Türkçe yapmak için gerekli işlemler (isteğe bağlı)
+      } 
+      else if (lang === 'eng') {
+        // İngilizce sayfaya yönlendir (URL'yi kendiniz belirtin)
+        window.location.href = "menu-english.html"; // İngilizce sayfanın URL'si
+      }
+    }
+
+    // Sayfa yüklendiğinde popup'ı göster, diğer içeriği gizle
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('landing').style.display = 'none';
+    });
+  </script>
   </body>
 </html>
