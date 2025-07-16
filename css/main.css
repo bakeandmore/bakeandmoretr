@@ -96,19 +96,19 @@ hr {
 #goTop {
   width: 50px;
   height: 50px;
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 20px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color: #f0f7ee; /* Set a background color */
-  color: #363537; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 7px; /* Some padding */
-  border-radius: 30px; /* Rounded corners */
-  font-size: 30px; /* Increase font size */
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #f0f7ee;
+  color: #363537;
+  cursor: pointer;
+  padding: 7px;
+  border-radius: 30px;
+  font-size: 30px;
   animation-name: fadeIn;
   animation-duration: 250ms;
 }
