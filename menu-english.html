@@ -7,9 +7,64 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bake & More Qr Menu</title>
+    <style>
+      /* Dil Seçim Popup Stili */
+      .language-popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        font-family: Arial, sans-serif;
+      }
+      .language-box {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      }
+      .language-box h2 {
+        margin-bottom: 20px;
+        color: #333;
+      }
+      .language-btn {
+        padding: 12px 25px;
+        margin: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+      .language-btn.tr {
+        background: #E30A17; /* Türk bayrağı kırmızısı */
+        color: white;
+      }
+      .language-btn.eng {
+        background: #0A17E3; /* İngiliz bayrağı mavisi */
+        color: white;
+      }
+      .language-btn:hover {
+        opacity: 0.8;
+      }
+    </style>
   </head>
 
   <body style="max-width: 768px; margin: auto">
+    <div class="language-popup" id="languagePopup">
+      <div class="language-box">
+        <h2>Lütfen Dilinizi Seçin / Please Choose Your Language</h2>
+        <button class="language-btn tr" onclick="redirectTo('tr')">TÜRKÇE</button>
+        <button class="language-btn eng" onclick="redirectTo('eng')">ENGLISH</button>
+      </div>
+    </div>
     <a href="#navigation" id="goTop" title="Go to top"
       ><img
         src="images/icons/arrow-up-solid.svg"
@@ -129,7 +184,7 @@
       </div>
       <div class="urun" id="smokedbeefegg">
         <div class="content">
-          <div class="name">Smoked Antrecote Scrambled Eggs</div>
+          <div class="name">Smoked Entrecote Scrambled Eggs</div>
           <div class="desc">
             Scrambled Eggs, Smoked Entrecote, Cheddar, Cheese Zest
           </div>
@@ -947,5 +1002,28 @@
       type="text/javascript"
       src="js/lightbox-plus-jquery.min.js"
     ></script>
+     <script>
+    // Dil seçimine göre yönlendirme
+    function redirectTo(lang) {
+      const landing = document.getElementById('landing');
+      const popup = document.getElementById('languagePopup');
+
+      if (lang === 'eng') {
+        // Türkçe sayfada kal (mevcut içerik gözükecek)
+        popup.style.display = 'none';
+        landing.style.display = 'block';
+        // Sayfa içeriğini Türkçe yapmak için gerekli işlemler (isteğe bağlı)
+      } 
+      else if (lang === 'tr') {
+        // İngilizce sayfaya yönlendir (URL'yi kendiniz belirtin)
+        window.location.href = "index.html"; // İngilizce sayfanın URL'si
+      }
+    }
+
+    // Sayfa yüklendiğinde popup'ı göster, diğer içeriği gizle
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('landing').style.display = 'none';
+    });
+  </script>
   </body>
 </html>
