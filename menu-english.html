@@ -12,9 +12,10 @@
   <body style="max-width: 768px; margin: auto">
     <div class="language-popup" id="languagePopup">
       <div class="language-box">
-        <h2>Lütfen Dilinizi Seçin / Please Choose Your Language</h2>
+        <h2>Lütfen Dilinizi Seçin / Please Choose Your Language / Выберите язык</h2>
         <button class="language-btn tr" onclick="redirectTo('tr')">TÜRKÇE</button>
         <button class="language-btn eng" onclick="redirectTo('eng')">ENGLISH</button>
+        <button class="language-btn rus" onclick="redirectTo('rus')">РУССКИЙ</button>
       </div>
     </div>
     <a href="#navigation" id="goTop" title="Go to top"
@@ -924,6 +925,9 @@
       } 
       else if (lang === 'tr') {
         window.location.href = "index.html";
+      }
+      else if (lang === 'rus') {
+        window.location.href = "menu-russian.html";
       }
     }
     document.addEventListener('DOMContentLoaded', function() {

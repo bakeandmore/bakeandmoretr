@@ -293,6 +293,10 @@ position: fixed;
   background: #0A17E3;
   color: white;
 }
+.language-btn.rus {
+  background: #E30A17; /* Rus bayrağı kırmızısı */
+  color: white;
+}
 .language-btn:hover {
   opacity: 0.8;
 }
